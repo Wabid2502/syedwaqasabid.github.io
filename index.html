@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syed Waqas Abid | Creative Designer and Video Editor</title>
+<title>Syed Waqas Abid | Graphic Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@ body {
   cursor: none;
 }
 
-/* CURSOR */
 .cursor {
   position: fixed;
   width: 12px; height: 12px;
@@ -42,7 +41,6 @@ body {
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
-  mix-blend-mode: normal;
 }
 .cursor-ring {
   position: fixed;
@@ -56,7 +54,6 @@ body {
 }
 body:hover .cursor { opacity: 1; }
 
-/* NOISE OVERLAY */
 body::before {
   content: '';
   position: fixed;
@@ -67,7 +64,6 @@ body::before {
   opacity: 0.4;
 }
 
-/* NAV */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -85,11 +81,7 @@ nav {
   color: var(--white);
   text-decoration: none;
 }
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
   font-family: 'DM Mono', monospace;
   font-size: 0.7rem;
@@ -102,7 +94,6 @@ nav {
 }
 .nav-links a:hover { opacity: 1; }
 
-/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -130,13 +121,7 @@ nav {
   align-items: center;
   gap: 0.75rem;
 }
-.hero-tag::before {
-  content: '';
-  display: inline-block;
-  width: 2rem;
-  height: 1px;
-  background: var(--accent);
-}
+.hero-tag::before { content: ''; display: inline-block; width: 2rem; height: 1px; background: var(--accent); }
 .hero-name {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(5rem, 14vw, 14rem);
@@ -145,11 +130,7 @@ nav {
   color: var(--white);
   margin-bottom: 2rem;
 }
-.hero-name span {
-  display: block;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--white);
-}
+.hero-name span { display: block; color: transparent; -webkit-text-stroke: 1px var(--white); }
 .hero-footer {
   display: flex;
   justify-content: space-between;
@@ -158,10 +139,7 @@ nav {
   border-top: 1px solid var(--border);
   padding-top: 2rem;
 }
-.hero-roles {
-  display: flex;
-  gap: 1.5rem;
-}
+.hero-roles { display: flex; gap: 1.5rem; }
 .role-badge {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -181,18 +159,9 @@ nav {
   align-items: center;
   gap: 0.75rem;
 }
-.scroll-line {
-  width: 3rem;
-  height: 1px;
-  background: var(--muted);
-  animation: scrollAnim 2s ease-in-out infinite;
-}
-@keyframes scrollAnim {
-  0%, 100% { width: 1rem; opacity: 0.4; }
-  50% { width: 3rem; opacity: 1; }
-}
+.scroll-line { width: 3rem; height: 1px; background: var(--muted); animation: scrollAnim 2s ease-in-out infinite; }
+@keyframes scrollAnim { 0%, 100% { width: 1rem; opacity: 0.4; } 50% { width: 3rem; opacity: 1; } }
 
-/* MARQUEE */
 .marquee-wrap {
   overflow: hidden;
   border-top: 1px solid var(--border);
@@ -200,12 +169,7 @@ nav {
   padding: 1.25rem 0;
   background: var(--card-bg);
 }
-.marquee-track {
-  display: flex;
-  gap: 3rem;
-  animation: marquee 18s linear infinite;
-  white-space: nowrap;
-}
+.marquee-track { display: flex; gap: 3rem; animation: marquee 14s linear infinite; white-space: nowrap; }
 .marquee-item {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.1rem;
@@ -216,18 +180,9 @@ nav {
   gap: 1.5rem;
   flex-shrink: 0;
 }
-.marquee-item .dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
+.marquee-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ABOUT */
 .about {
   padding: 7rem 3rem;
   display: grid;
@@ -237,63 +192,16 @@ nav {
   max-width: 1400px;
   margin: 0 auto;
 }
-.about-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2rem;
-}
-.about-counter {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 7rem;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--border);
-  margin-bottom: 1.5rem;
-}
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.stat {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
-}
-.stat-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem;
-  color: var(--white);
-  line-height: 1;
-}
+.about-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+.about-counter { font-family: 'Bebas Neue', sans-serif; font-size: 7rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--border); margin-bottom: 1.5rem; }
+.about-stats { display: flex; flex-direction: column; gap: 1.5rem; }
+.stat { border-top: 1px solid var(--border); padding-top: 1.25rem; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--white); line-height: 1; }
 .stat-num span { color: var(--accent); }
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 0.3rem;
-  letter-spacing: 0.03em;
-}
-.about-text h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  letter-spacing: 0.02em;
-  line-height: 1.05;
-  margin-bottom: 2rem;
-}
-.about-text h2 em {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--muted);
-}
-.about-text p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(245,240,232,0.7);
-  margin-bottom: 1.5rem;
-}
+.stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.03em; }
+.about-text h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); letter-spacing: 0.02em; line-height: 1.05; margin-bottom: 2rem; }
+.about-text h2 em { font-family: 'DM Sans', sans-serif; font-weight: 300; font-style: italic; color: var(--muted); }
+.about-text p { font-size: 1.05rem; line-height: 1.8; color: rgba(245,240,232,0.7); margin-bottom: 1.5rem; }
 .about-cta {
   display: inline-flex;
   align-items: center;
@@ -312,402 +220,85 @@ nav {
 .about-cta:hover { background: var(--accent2); transform: translateY(-2px); }
 .about-cta svg { width: 16px; height: 16px; }
 
-/* SKILLS */
-.skills-section {
-  padding: 5rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-top: 3rem;
-}
-.skill-card {
-  background: var(--black);
-  padding: 2.5rem 2rem;
-  transition: background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.skill-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 2px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
+.skills-section { padding: 5rem 3rem; max-width: 1400px; margin: 0 auto; }
+.skills-grid { display: grid; grid-template-columns: 1fr; max-width: 560px; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+.skill-card { background: var(--black); padding: 2.5rem 2rem; transition: background 0.3s ease; position: relative; overflow: hidden; }
+.skill-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
 .skill-card:hover { background: var(--card-bg); }
 .skill-card:hover::after { transform: scaleX(1); }
-.skill-icon {
-  font-size: 1.8rem;
-  margin-bottom: 1.25rem;
-  display: block;
-}
-.skill-card h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-.skill-card p {
-  font-size: 0.85rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-.skill-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1.25rem;
-}
-.tool-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid rgba(232,82,26,0.3);
-  padding: 0.25rem 0.6rem;
-}
+.skill-icon { font-size: 1.8rem; margin-bottom: 1.25rem; display: block; }
+.skill-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+.skill-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+.skill-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
+.tool-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(232,82,26,0.3); padding: 0.25rem 0.6rem; }
 
-/* WORK / PORTFOLIO */
-.work {
-  padding: 7rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 4rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 2rem;
-}
-.section-label-group {}
-.section-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.75rem;
-}
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-.section-count {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 6rem;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--border);
-  line-height: 1;
-}
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.work-card {
-  position: relative;
-  overflow: hidden;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  cursor: none;
-  group: true;
-}
-.work-card-inner {
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* Unique visual for each card */
-.wc1 { background: url('images/01-cafe.png') center/cover no-repeat; }
+.work { padding: 7rem 3rem; max-width: 1400px; margin: 0 auto; }
+.section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+.section-tag { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.75rem; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); letter-spacing: 0.02em; line-height: 1; }
+.section-count { font-family: 'Bebas Neue', sans-serif; font-size: 6rem; color: transparent; -webkit-text-stroke: 1px var(--border); line-height: 1; }
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.work-card { position: relative; overflow: hidden; background: var(--card-bg); border: 1px solid var(--border); cursor: none; }
+.work-card-inner { aspect-ratio: 4/3; background: linear-gradient(135deg, #1a1a1a 0%, #111 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .wc2 { background: url('images/02-fitness.png') center/cover no-repeat; }
 .wc3 { background: url('images/03-fashion.png') center/cover no-repeat; }
 .wc4 { background: url('images/04-festival.png') center/cover no-repeat; }
 .wc5 { background: url('images/05-card.png') center/cover no-repeat; }
 .wc6 { background: url('images/06-thumbnail.png') center/cover no-repeat; }
-.wc7 { background: url('images/07-poster.png') center/cover no-repeat; }
 .wc8 { background: url('images/08-logo.png') center/cover no-repeat; }
-.wc9 { background: url('images/09-realestate.png') center/cover no-repeat; }
-.wc10 { background: url('images/10-realestate.png') center/cover no-repeat; }
-.work-card-placeholder {
-  width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-  transition: transform 0.5s ease;
-}
+.work-card-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; transition: transform 0.5s ease; }
 .work-card:hover .work-card-placeholder { transform: scale(1.04); }
-.placeholder-icon {
-  font-size: 3rem;
-  opacity: 0.3;
-}
-.placeholder-type {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(245,240,232,0.2);
-}
-.work-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
-}
+.placeholder-icon { font-size: 3rem; opacity: 0.3; }
+.placeholder-type { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.2); }
+.work-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent 100%); opacity: 0; transition: opacity 0.4s ease; display: flex; align-items: flex-end; padding: 1.5rem; }
 .work-card:hover .work-card-overlay { opacity: 1; }
-.overlay-content {}
-.overlay-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.4rem;
-}
-.overlay-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
-  color: var(--white);
-}
-.work-card-meta {
-  padding: 1rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.work-card-title {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--white);
-}
-.work-card-type {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.canva-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border: 1px solid var(--accent);
-  padding: 0.3rem 0.6rem;
-}
+.overlay-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.4rem; }
+.overlay-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; color: var(--white); }
+.work-card-meta { padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
+.work-card-title { font-size: 0.85rem; font-weight: 500; color: var(--white); }
+.work-card-type { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.work-card-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.35rem; padding: 0.15rem 0.5rem; border-radius: 999px; }
+.badge-freelance { color: var(--accent2); border: 1px solid rgba(240,165,0,0.4); }
+.badge-practice { color: var(--muted); border: 1px solid var(--border); }
+.canva-link { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; opacity: 0; transition: opacity 0.3s ease; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; }
 .work-card:hover .canva-link { opacity: 1; }
 
-/* PROCESS */
-.process {
-  padding: 7rem 3rem;
-  background: var(--card-bg);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.process-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin-top: 4rem;
-  border: 1px solid var(--border);
-}
-.process-step {
-  padding: 2.5rem 2rem;
-  border-right: 1px solid var(--border);
-  position: relative;
-}
+.process { padding: 7rem 3rem; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.process-inner { max-width: 1400px; margin: 0 auto; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 4rem; border: 1px solid var(--border); }
+.process-step { padding: 2.5rem 2rem; border-right: 1px solid var(--border); position: relative; }
 .process-step:last-child { border-right: none; }
-.step-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 4rem;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(232,82,26,0.3);
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-.step-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-  color: var(--white);
-}
-.step-desc {
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
+.step-num { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: transparent; -webkit-text-stroke: 1px rgba(232,82,26,0.3); line-height: 1; margin-bottom: 1rem; }
+.step-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: var(--white); }
+.step-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
 
-/* CONTACT */
-.contact {
-  padding: 8rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  text-align: center;
-}
-.contact-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2rem;
-  display: block;
-}
-.contact-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 10vw, 10rem);
-  letter-spacing: -0.01em;
-  line-height: 0.9;
-  margin-bottom: 2.5rem;
-}
-.contact-headline span {
-  display: block;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(245,240,232,0.2);
-}
-.contact-sub {
-  font-size: 1rem;
-  color: var(--muted);
-  max-width: 500px;
-  margin: 0 auto 3rem;
-  line-height: 1.7;
-}
-.contact-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--accent);
-  color: var(--white);
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+.contact { padding: 8rem 3rem; max-width: 1400px; margin: 0 auto; text-align: center; }
+.contact-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: block; }
+.contact-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 10rem); letter-spacing: -0.01em; line-height: 0.9; margin-bottom: 2.5rem; }
+.contact-headline span { display: block; color: transparent; -webkit-text-stroke: 1px rgba(245,240,232,0.2); }
+.contact-sub { font-size: 1rem; color: var(--muted); max-width: 500px; margin: 0 auto 3rem; line-height: 1.7; }
+.contact-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--accent); color: var(--white); text-decoration: none; padding: 1rem 2.5rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.3s ease, transform 0.2s ease; }
 .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: transparent;
-  color: var(--white);
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 400;
-  border: 1px solid var(--border);
-  transition: border-color 0.3s ease, transform 0.2s ease;
-}
+.btn-outline { display: inline-flex; align-items: center; gap: 0.75rem; background: transparent; color: var(--white); text-decoration: none; padding: 1rem 2.5rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; border: 1px solid var(--border); transition: border-color 0.3s ease, transform 0.2s ease; }
 .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+.contact-info { display: flex; justify-content: center; gap: 3rem; margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 3rem; }
+.contact-item { text-align: left; }
+.contact-item-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.4rem; }
+.contact-item-value { font-size: 0.9rem; color: var(--white); }
 
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 4rem;
-  border-top: 1px solid var(--border);
-  padding-top: 3rem;
-}
-.contact-item {
-  text-align: left;
-}
-.contact-item-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: block;
-  margin-bottom: 0.4rem;
-}
-.contact-item-value {
-  font-size: 0.9rem;
-  color: var(--white);
-}
+footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-name { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.1em; color: var(--muted); }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--muted); }
 
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
-.footer-copy {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* REVEAL ANIMATIONS */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 1.25rem 1.5rem; }
   .hero { padding: 0 1.5rem 3rem; }
   .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid { max-width: 100%; }
   .work-grid { grid-template-columns: 1fr 1fr; }
   .process-steps { grid-template-columns: 1fr 1fr; }
   .process-step { border-bottom: 1px solid var(--border); }
@@ -717,7 +308,6 @@ footer {
   .contact-info { flex-direction: column; gap: 1.5rem; align-items: center; }
 }
 @media (max-width: 600px) {
-  .skills-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .nav-links { display: none; }
@@ -731,7 +321,6 @@ footer {
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">SWA</a>
   <ul class="nav-links">
@@ -741,7 +330,6 @@ footer {
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-tag">1 year experience · Open to clients</div>
@@ -753,8 +341,6 @@ footer {
   <div class="hero-footer">
     <div class="hero-roles">
       <span class="role-badge">Graphic Designer</span>
-      <span class="role-badge">Video Editor</span>
-      <span class="role-badge">Social Media Manager</span>
     </div>
     <div class="hero-scroll">
       <div class="scroll-line"></div>
@@ -763,29 +349,21 @@ footer {
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
     <div class="marquee-item"><span class="dot"></span>Brand Identity</div>
     <div class="marquee-item"><span class="dot"></span>Social Media Design</div>
-    <div class="marquee-item"><span class="dot"></span>Video Editing</div>
-    <div class="marquee-item"><span class="dot"></span>Motion Graphics</div>
-    <div class="marquee-item"><span class="dot"></span>Adobe Photoshop</div>
-    <div class="marquee-item"><span class="dot"></span>After Effects</div>
-    <div class="marquee-item"><span class="dot"></span>Premiere Pro</div>
-    <div class="marquee-item"><span class="dot"></span>Content Strategy</div>
+    <div class="marquee-item"><span class="dot"></span>Print Design</div>
+    <div class="marquee-item"><span class="dot"></span>Canva</div>
+    <div class="marquee-item"><span class="dot"></span>Logo Design</div>
     <div class="marquee-item"><span class="dot"></span>Brand Identity</div>
     <div class="marquee-item"><span class="dot"></span>Social Media Design</div>
-    <div class="marquee-item"><span class="dot"></span>Video Editing</div>
-    <div class="marquee-item"><span class="dot"></span>Motion Graphics</div>
-    <div class="marquee-item"><span class="dot"></span>Adobe Photoshop</div>
-    <div class="marquee-item"><span class="dot"></span>After Effects</div>
-    <div class="marquee-item"><span class="dot"></span>Premiere Pro</div>
-    <div class="marquee-item"><span class="dot"></span>Content Strategy</div>
+    <div class="marquee-item"><span class="dot"></span>Print Design</div>
+    <div class="marquee-item"><span class="dot"></span>Canva</div>
+    <div class="marquee-item"><span class="dot"></span>Logo Design</div>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-left reveal">
     <div class="about-label">About me</div>
@@ -793,15 +371,15 @@ footer {
     <div class="about-stats">
       <div class="stat">
         <div class="stat-num">1<span>yr</span></div>
-        <div class="stat-label">Hands-on creative experience</div>
+        <div class="stat-label">Hands-on design experience</div>
       </div>
       <div class="stat">
-        <div class="stat-num">15<span>+</span></div>
-        <div class="stat-label">Projects completed so far</div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">Featured projects below</div>
       </div>
       <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Creative disciplines: design, video and social</div>
+        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label">Paid freelance projects delivered</div>
       </div>
       <div class="stat">
         <div class="stat-num">0</div>
@@ -811,8 +389,8 @@ footer {
   </div>
   <div class="about-text reveal">
     <h2>1 year in and <em>just</em> getting started.</h2>
-    <p>Over the past year I have been building my skills across graphic design, video editing, and social media content by working through a solid handful of projects that pushed me to learn fast and deliver clean work.</p>
-    <p>The projects in this portfolio are a mix of personal and showcase pieces built to demonstrate range across different formats: social posts, brand identities, event flyers, YouTube thumbnails, product marketing, and more.</p>
+    <p>Over the past year I have been building my skills in graphic design by working through a solid handful of projects that pushed me to learn fast and deliver clean work.</p>
+    <p>The projects in this portfolio are a mix of freelance client work and personal practice pieces, built to demonstrate range across formats: brand identities, social posts, event flyers, and print design.</p>
     <p>I am at the early stage of my freelance journey and actively looking to work with clients who want quality creative output at a fair rate and someone who will genuinely care about getting it right.</p>
     <a class="about-cta" href="mailto:Sayyedd072@gmail.com">
       Let's work together
@@ -823,147 +401,56 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS -->
 <section class="skills-section" id="skills">
   <div class="section-header reveal">
     <div class="section-label-group">
       <span class="section-tag">What I do</span>
       <h2 class="section-title">Services</h2>
     </div>
-    <div class="section-count">03</div>
+    <div class="section-count">01</div>
   </div>
   <div class="skills-grid reveal">
     <div class="skill-card">
       <span class="skill-icon">✦</span>
       <h3>Graphic Design</h3>
-      <p>Brand identities, social media visuals, marketing collateral, print design, and everything in between. Built for consistency and impact.</p>
+      <p>Brand identities, social media visuals, marketing collateral, and print design. Built for consistency and impact.</p>
       <div class="skill-tools">
-        <span class="tool-tag">Photoshop</span>
-        <span class="tool-tag">Illustrator</span>
         <span class="tool-tag">Canva</span>
-        <span class="tool-tag">InDesign</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <span class="skill-icon">◈</span>
-      <h3>Video Editing</h3>
-      <p>Short-form content for Reels, TikTok, and YouTube. Motion graphics, color grading, sound design, and punchy edits that hold attention.</p>
-      <div class="skill-tools">
-        <span class="tool-tag">Premiere Pro</span>
-        <span class="tool-tag">After Effects</span>
-        <span class="tool-tag">DaVinci Resolve</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <span class="skill-icon">⊕</span>
-      <h3>Social Media Management</h3>
-      <p>Content strategy, platform-optimized design, scheduling, and visual brand consistency. Multi-platform systems that grow accounts.</p>
-      <div class="skill-tools">
-        <span class="tool-tag">Instagram</span>
-        <span class="tool-tag">Facebook</span>
-        <span class="tool-tag">LinkedIn</span>
-        <span class="tool-tag">Twitter/X</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WORK -->
 <section class="work" id="work">
   <div class="section-header reveal">
     <div class="section-label-group">
-      <span class="section-tag">Showcase work — personal projects</span>
+      <span class="section-tag">Freelance client work &amp; personal practice</span>
       <h2 class="section-title">Portfolio</h2>
     </div>
-    <div class="section-count">10</div>
+    <div class="section-count">06</div>
   </div>
   <div class="work-grid reveal">
 
     <div class="work-card">
-      <div class="work-card-inner wc1">
+      <div class="work-card-inner wc8">
         <div class="work-card-placeholder">
-          <div class="placeholder-icon">☕</div>
-          <div class="placeholder-type">Instagram Post</div>
+          <div class="placeholder-icon">◈</div>
+          <div class="placeholder-type">Logo Design</div>
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Social Media</span>
-            <div class="overlay-title">Luna Café — Weekend Brunch</div>
+            <span class="overlay-tag">Freelance · Brand Identity</span>
+            <div class="overlay-title">Vertex Studio Logo</div>
           </div>
         </div>
       </div>
       <div class="work-card-meta">
         <div>
-          <div class="work-card-title">Luna Café — Brunch Promo</div>
-          <div class="work-card-type">Instagram Post</div>
+          <div class="work-card-title">Vertex Studio Logo</div>
+          <div class="work-card-type">Logo Design</div>
+          <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/WSTFB86qz_CxhTu" target="_blank">View ↗</a>
-      </div>
-    </div>
-
-    <div class="work-card">
-      <div class="work-card-inner wc2">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">⚡</div>
-          <div class="placeholder-type">Facebook Cover</div>
-        </div>
-        <div class="work-card-overlay">
-          <div class="overlay-content">
-            <span class="overlay-tag">Branding</span>
-            <div class="overlay-title">Peak Fitness — Brand Cover</div>
-          </div>
-        </div>
-      </div>
-      <div class="work-card-meta">
-        <div>
-          <div class="work-card-title">Peak Fitness — Brand Cover</div>
-          <div class="work-card-type">Facebook Cover</div>
-        </div>
-        <a class="canva-link" href="https://www.canva.com/d/7ELSS9vCfn4H6Q4" target="_blank">View ↗</a>
-      </div>
-    </div>
-
-    <div class="work-card">
-      <div class="work-card-inner wc3">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">🛍</div>
-          <div class="placeholder-type">Instagram Story</div>
-        </div>
-        <div class="work-card-overlay">
-          <div class="overlay-content">
-            <span class="overlay-tag">Social Media</span>
-            <div class="overlay-title">Fashion Sale — 50% Off</div>
-          </div>
-        </div>
-      </div>
-      <div class="work-card-meta">
-        <div>
-          <div class="work-card-title">Fashion Sale — 50% Off</div>
-          <div class="work-card-type">Instagram Story</div>
-        </div>
-        <a class="canva-link" href="https://www.canva.com/d/cFfcMPS7S51WxpS" target="_blank">View ↗</a>
-      </div>
-    </div>
-
-    <div class="work-card">
-      <div class="work-card-inner wc4">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <div class="placeholder-type">Event Flyer</div>
-        </div>
-        <div class="work-card-overlay">
-          <div class="overlay-content">
-            <span class="overlay-tag">Event Marketing</span>
-            <div class="overlay-title">Neon Beats — Music Festival</div>
-          </div>
-        </div>
-      </div>
-      <div class="work-card-meta">
-        <div>
-          <div class="work-card-title">Neon Beats — Festival Flyer</div>
-          <div class="work-card-type">Event Flyer</div>
-        </div>
-        <a class="canva-link" href="https://www.canva.com/d/jRkj0PEgebXQJ5J" target="_blank">View ↗</a>
+        <a class="canva-link" href="https://www.canva.com/d/nhgcHUKIRv6NN1m" target="_blank">View ↗</a>
       </div>
     </div>
 
@@ -975,15 +462,16 @@ footer {
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Print Design</span>
-            <div class="overlay-title">Creative Director Business Card</div>
+            <span class="overlay-tag">Personal Practice · Print Design</span>
+            <div class="overlay-title">Lahore Ventures Business Card</div>
           </div>
         </div>
       </div>
       <div class="work-card-meta">
         <div>
-          <div class="work-card-title">Creative Director Card</div>
+          <div class="work-card-title">Lahore Ventures Business Card</div>
           <div class="work-card-type">Business Card</div>
+          <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
         <a class="canva-link" href="https://www.canva.com/d/6RJo1CI1zROIHab" target="_blank">View ↗</a>
       </div>
@@ -997,7 +485,7 @@ footer {
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Video / Media</span>
+            <span class="overlay-tag">Freelance · Digital Design</span>
             <div class="overlay-title">5 Logo Secrets Thumbnail</div>
           </div>
         </div>
@@ -1006,104 +494,85 @@ footer {
         <div>
           <div class="work-card-title">5 Logo Design Secrets</div>
           <div class="work-card-type">YouTube Thumbnail</div>
+          <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
         <a class="canva-link" href="https://www.canva.com/d/9wYaV0LTsXjuHb1" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
-      <div class="work-card-inner wc7">
+      <div class="work-card-inner wc2">
         <div class="work-card-placeholder">
-          <div class="placeholder-icon">◎</div>
-          <div class="placeholder-type">Product Poster</div>
+          <div class="placeholder-icon">⚡</div>
+          <div class="placeholder-type">Facebook Cover</div>
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Marketing</span>
-            <div class="overlay-title">ProSound X1 Product Launch</div>
+            <span class="overlay-tag">Personal Practice · Branding</span>
+            <div class="overlay-title">Momentum Gym Brand Cover</div>
           </div>
         </div>
       </div>
       <div class="work-card-meta">
         <div>
-          <div class="work-card-title">ProSound X1 Launch</div>
-          <div class="work-card-type">Product Poster</div>
+          <div class="work-card-title">Momentum Gym Brand Cover</div>
+          <div class="work-card-type">Facebook Cover</div>
+          <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/wFp2OEu3FUPY1ic" target="_blank">View ↗</a>
+        <a class="canva-link" href="https://www.canva.com/d/7ELSS9vCfn4H6Q4" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
-      <div class="work-card-inner wc8">
+      <div class="work-card-inner wc3">
         <div class="work-card-placeholder">
-          <div class="placeholder-icon">◈</div>
-          <div class="placeholder-type">Logo Design</div>
+          <div class="placeholder-icon">🛍</div>
+          <div class="placeholder-type">Instagram Story</div>
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Brand Identity</span>
-            <div class="overlay-title">Vertex Studio Logo</div>
+            <span class="overlay-tag">Freelance · Social Media Design</span>
+            <div class="overlay-title">Fashion Sale — 50% Off</div>
           </div>
         </div>
       </div>
       <div class="work-card-meta">
         <div>
-          <div class="work-card-title">Vertex Studio Logo</div>
-          <div class="work-card-type">Logo Design</div>
+          <div class="work-card-title">Fashion Sale — 50% Off</div>
+          <div class="work-card-type">Instagram Story</div>
+          <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/nhgcHUKIRv6NN1m" target="_blank">View ↗</a>
+        <a class="canva-link" href="https://www.canva.com/d/cFfcMPS7S51WxpS" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
-      <div class="work-card-inner wc9">
+      <div class="work-card-inner wc4">
         <div class="work-card-placeholder">
-          <div class="placeholder-icon">✦</div>
-          <div class="placeholder-type">Twitter / X Post</div>
+          <div class="placeholder-icon">🎵</div>
+          <div class="placeholder-type">Event Flyer</div>
         </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
-            <span class="overlay-tag">Social Media</span>
-            <div class="overlay-title">10K Users Milestone Post</div>
+            <span class="overlay-tag">Personal Practice · Event Marketing</span>
+            <div class="overlay-title">Sufi Nights Festival Flyer</div>
           </div>
         </div>
       </div>
       <div class="work-card-meta">
         <div>
-          <div class="work-card-title">10K Users Milestone</div>
-          <div class="work-card-type">Twitter / X Post</div>
+          <div class="work-card-title">Sufi Nights Festival Flyer</div>
+          <div class="work-card-type">Event Flyer</div>
+          <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/655dxeusLIq2Yoa" target="_blank">View ↗</a>
-      </div>
-    </div>
-
-    <div class="work-card">
-      <div class="work-card-inner wc10">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">⊞</div>
-          <div class="placeholder-type">Instagram Post</div>
-        </div>
-        <div class="work-card-overlay">
-          <div class="overlay-content">
-            <span class="overlay-tag">Real Estate</span>
-            <div class="overlay-title">Dream Home Property Post</div>
-          </div>
-        </div>
-      </div>
-      <div class="work-card-meta">
-        <div>
-          <div class="work-card-title">Dream Home Real Estate</div>
-          <div class="work-card-type">Instagram Post</div>
-        </div>
-        <a class="canva-link" href="https://www.canva.com/d/GSuWk5J6OifklIr" target="_blank">View ↗</a>
+        <a class="canva-link" href="https://www.canva.com/d/jRkj0PEgebXQJ5J" target="_blank">View ↗</a>
       </div>
     </div>
 
   </div>
-  <p style="margin-top:2rem;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-align:center;">✦ All projects above are personal showcase pieces created to demonstrate skills, not client work</p>
+  <p style="margin-top:2rem;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-align:center;">✦ A mix of freelance client work and personal practice pieces, labeled accordingly above</p>
 </section>
 
-<!-- PROCESS -->
 <section class="process">
   <div class="process-inner">
     <div class="section-header reveal">
@@ -1138,7 +607,6 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <span class="contact-eyebrow reveal">Ready to create?</span>
   <h2 class="contact-headline reveal">
@@ -1176,7 +644,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-name">Syed Waqas Abid</div>
   <div class="footer-copy">© 2025 · All rights reserved</div>
@@ -1229,3 +696,6 @@ reveals.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+```
+
+Select it all (click into the code block, Ctrl/Cmd+A, Ctrl/Cmd+C), then paste over the contents of `index.html` in GitHub's editor and commit.
