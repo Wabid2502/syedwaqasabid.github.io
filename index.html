@@ -246,10 +246,6 @@ nav {
 .wc5 { background: url('05-card.png') center/cover no-repeat; }
 .wc6 { background: url('06-thumbnail.png') center/cover no-repeat; }
 .wc8 { background: url('08-logo.png') center/cover no-repeat; }
-.work-card-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; transition: transform 0.5s ease; }
-.work-card:hover .work-card-placeholder { transform: scale(1.04); }
-.placeholder-icon { font-size: 3rem; opacity: 0.3; }
-.placeholder-type { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.2); }
 .work-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent 100%); opacity: 0; transition: opacity 0.4s ease; display: flex; align-items: flex-end; padding: 1.5rem; }
 .work-card:hover .work-card-overlay { opacity: 1; }
 .overlay-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.4rem; }
@@ -260,8 +256,6 @@ nav {
 .work-card-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.35rem; padding: 0.15rem 0.5rem; border-radius: 999px; }
 .badge-freelance { color: var(--accent2); border: 1px solid rgba(240,165,0,0.4); }
 .badge-practice { color: var(--muted); border: 1px solid var(--border); }
-.canva-link { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; opacity: 0; transition: opacity 0.3s ease; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; }
-.work-card:hover .canva-link { opacity: 1; }
 
 .process { padding: 7rem 3rem; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .process-inner { max-width: 1400px; margin: 0 auto; }
@@ -433,10 +427,6 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
 
     <div class="work-card">
       <div class="work-card-inner wc8">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">◈</div>
-          <div class="placeholder-type">Logo Design</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Freelance · Brand Identity</span>
@@ -450,16 +440,11 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">Logo Design</div>
           <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/nhgcHUKIRv6NN1m" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-inner wc5">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">◻</div>
-          <div class="placeholder-type">Business Card</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Personal Practice · Print Design</span>
@@ -473,16 +458,11 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">Business Card</div>
           <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/6RJo1CI1zROIHab" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-inner wc6">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">▶</div>
-          <div class="placeholder-type">YouTube Thumbnail</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Freelance · Digital Design</span>
@@ -496,16 +476,11 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">YouTube Thumbnail</div>
           <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/9wYaV0LTsXjuHb1" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-inner wc2">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">⚡</div>
-          <div class="placeholder-type">Facebook Cover</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Personal Practice · Branding</span>
@@ -519,16 +494,11 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">Facebook Cover</div>
           <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/7ELSS9vCfn4H6Q4" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-inner wc3">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">🛍</div>
-          <div class="placeholder-type">Instagram Story</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Freelance · Social Media Design</span>
@@ -542,16 +512,11 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">Instagram Story</div>
           <span class="work-card-badge badge-freelance">Freelance Client Work</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/cFfcMPS7S51WxpS" target="_blank">View ↗</a>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-inner wc4">
-        <div class="work-card-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <div class="placeholder-type">Event Flyer</div>
-        </div>
         <div class="work-card-overlay">
           <div class="overlay-content">
             <span class="overlay-tag">Personal Practice · Event Marketing</span>
@@ -565,7 +530,6 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex;
           <div class="work-card-type">Event Flyer</div>
           <span class="work-card-badge badge-practice">Personal Practice</span>
         </div>
-        <a class="canva-link" href="https://www.canva.com/d/jRkj0PEgebXQJ5J" target="_blank">View ↗</a>
       </div>
     </div>
 
@@ -696,6 +660,3 @@ reveals.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
-```
-
-Select it all (click into the code block, Ctrl/Cmd+A, Ctrl/Cmd+C), then paste over the contents of `index.html` in GitHub's editor and commit.
